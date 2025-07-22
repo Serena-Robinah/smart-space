@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Space - Land & Property Evaluation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dOMD0J0q2PTyBE&libraries=places"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Smart Space</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#properties" class="nav-link">Properties</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Professional Land & Property Evaluation</h1>
+            <p>Expert valuation services in Makerere Kikoni and surrounding areas</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Get Evaluation</button>
+                <button class="btn btn-secondary">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Smart Space</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Smart Space is a leading property evaluation company based in Makerere Kikoni, Uganda. We provide comprehensive land and property valuation services with accuracy and professionalism.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Market Analysis</h3>
+                            <p>Detailed market research and analysis</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-home"></i>
+                            <h3>Property Valuation</h3>
+                            <p>Accurate property value assessment</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-map"></i>
+                            <h3>Land Surveying</h3>
+                            <p>Professional land measurement services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Our Expert Team</h2>
+            <p class="team-intro">Meet our experienced professionals dedicated to providing accurate property evaluations</p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="John Mugisha" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>John Mugisha</h3>
+                        <p class="member-role">Senior Property Valuator</p>
+                        <p class="member-description">15+ years experience in property valuation with expertise in residential and commercial properties.</p>
+                        <div class="member-qualifications">
+                            <span>BSc. Land Economics</span>
+                            <span>Certified Valuator</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face" alt="Sarah Nakato" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Sarah Nakato</h3>
+                        <p class="member-role">Land Surveyor</p>
+                        <p class="member-description">Professional land surveyor specializing in boundary determination and topographic surveys.</p>
+                        <div class="member-qualifications">
+                            <span>BSc. Surveying</span>
+                            <span>Licensed Surveyor</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="David Ssebunya" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>David Ssebunya</h3>
+                        <p class="member-role">Investment Analyst</p>
+                        <p class="member-description">Expert in real estate investment analysis and market research with focus on Kampala region.</p>
+                        <div class="member-qualifications">
+                            <span>MBA Finance</span>
+                            <span>CFA Candidate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face" alt="Grace Namugga" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Grace Namugga</h3>
+                        <p class="member-role">Legal Advisor</p>
+                        <p class="member-description">Legal expert ensuring all property transactions comply with Ugandan property laws.</p>
+                        <div class="member-qualifications">
+                            <span>LLB Law</span>
+                            <span>Property Law Specialist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Property Valuation</h3>
+                    <p>Comprehensive property assessment for residential and commercial properties</p>
+                    <span class="price">From UGX 500,000</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Land Survey</h3>
+                    <p>Professional land surveying and boundary determination services</p>
+                    <span class="price">From UGX 300,000</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>Investment Analysis</h3>
+                    <p>Real estate investment feasibility studies and market analysis</p>
+                    <span class="price">From UGX 800,000</span>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Legal Compliance</h3>
+                    <p>Property documentation and legal compliance verification</p>
+                    <span class="price">From UGX 400,000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="properties" class="properties">
+        <div class="container">
+            <h2 class="section-title">Our Properties</h2>
+            
+            <!-- Property Filters -->
+            <div class="property-filters">
+                <div class="filter-group">
+                    <select id="typeFilter">
+                        <option value="">All Types</option>
+                        <option value="house">Houses</option>
+                        <option value="apartment">Apartments</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="land">Land</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="statusFilter">
+                        <option value="">All Status</option>
+                        <option value="sale">For Sale</option>
+                        <option value="rent">For Rent</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="locationFilter">
+                        <option value="">All Locations</option>
+                        <option value="makerere">Makerere</option>
+                        <option value="kikoni">Kikoni</option>
+                        <option value="wandegeya">Wandegeya</option>
+                        <option value="mulago">Mulago</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <input type="text" id="searchInput" placeholder="Search properties...">
+                </div>
+                <button class="btn btn-primary" id="viewAllBtn">View All Properties</button>
+            </div>
+
+            <!-- Featured Properties -->
+            <h3 class="featured-title">Featured Properties</h3>
+            <div class="properties-grid" id="featuredProperties">
+                <!-- Featured properties will be loaded here -->
+            </div>
+
+            <!-- All Properties Modal -->
+            <div id="allPropertiesModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>All Properties</h2>
+                        <span class="close" id="closeModal">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="properties-grid" id="allPropertiesGrid">
+                            <!-- All properties will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Detail Modal -->
+            <div id="propertyDetailModal" class="modal">
+                <div class="modal-content property-detail-content">
+                    <div class="modal-header">
+                        <h2 id="propertyDetailTitle">Property Details</h2>
+                        <span class="close" id="closePropertyDetail">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="property-detail-grid">
+                            <div class="property-detail-left">
+                                <div class="property-detail-image">
+                                    <img id="propertyDetailImg" src="" alt="">
+                                    <div class="property-detail-status" id="propertyDetailStatus"></div>
+                                </div>
+                                <div class="property-gallery">
+                                    <div class="gallery-images" id="propertyGallery">
+                                        <!-- Additional images will be loaded here -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="property-detail-right">
+                                <div class="property-detail-info">
+                                    <h3 id="propertyDetailName"></h3>
+                                    <p class="property-detail-location" id="propertyDetailLocation"></p>
+                                    <p class="property-detail-price" id="propertyDetailPrice"></p>
+                                    <div class="property-detail-features" id="propertyDetailFeatures"></div>
+                                    <div class="property-detail-description" id="propertyDetailDescription"></div>
+                                    
+                                    <div class="property-actions">
+                                        <button class="btn btn-primary" id="buyPropertyBtn">
+                                            <i class="fas fa-shopping-cart"></i> Buy Now
+                                        </button>
+                                        <button class="btn btn-secondary" id="contactPropertyBtn">
+                                            <i class="fas fa-phone"></i> Contact Agent
+                                        </button>
+                                        <button class="btn btn-outline" id="scheduleViewingBtn">
+                                            <i class="fas fa-calendar"></i> Schedule Viewing
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Property Map -->
+                                <div class="property-map-container">
+                                    <h4>Location</h4>
+                                    <div id="propertyMap" class="property-map"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Makerere Kikoni, Kampala, Uganda</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+256 700 123 456</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@smartspace.ug</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Working Hours</h3>
+                            <p>Mon - Fri: 8AM - 6PM<br>Sat: 9AM - 4PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select Service</option>
+                                <option value="valuation">Property Valuation</option>
+                                <option value="survey">Land Survey</option>
+                                <option value="investment">Investment Analysis</option>
+                                <option value="legal">Legal Compliance</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Smart Space</h3>
+                    <p>Professional land and property evaluation services in Makerere Kikoni.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#properties">Properties</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Property Valuation</a></li>
+                        <li><a href="#">Land Survey</a></li>
+                        <li><a href="#">Investment Analysis</a></li>
+                        <li><a href="#">Legal Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Makerere Kikoni, Kampala</p>
+                    <p><i class="fas fa-phone"></i> +256 700 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@smartspace.ug</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Smart Space. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
