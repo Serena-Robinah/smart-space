@@ -269,12 +269,12 @@ propertyImages.forEach((img, index) => {
 const properties = [
     {
         id: 1,
-        name: "Modern Villa - Makerere",
-        location: "Makerere Hill, Kampala",
-        price: "UGX 850,000,000",
+        name: "Modern Villa - Masaka Town",
+        location: "Masaka Town, Masaka district",
+        price: "UGX 750,000,000",
         status: "sale",
         type: "house",
-        area: "makerere",
+        area: "masaka_town",
         image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=250&fit=crop",
         gallery: [
             "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
@@ -282,18 +282,18 @@ const properties = [
             "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop"
         ],
         features: ["4 Beds", "3 Baths", "2 Parking", "Garden", "Swimming Pool"],
-        description: "Luxurious modern villa located in the prestigious Makerere Hill area. Features contemporary design with high-end finishes, spacious rooms, and beautiful garden views. Perfect for families seeking comfort and elegance.",
-        coords: { lat: 0.3362, lng: 32.5665 },
+        description: "Luxurious modern villa located in the heart of Masaka Town. Features contemporary design with high-end finishes, spacious rooms, and beautiful garden views. Perfect for families seeking comfort and elegance.",
+        coords: { lat: -0.3333, lng: 31.7333 },
         featured: true
     },
     {
         id: 2,
-        name: "Commercial Building - Kikoni",
-        location: "Kikoni, Kampala",
-        price: "UGX 5,000,000/month",
+        name: "Commercial Building - Nyendo",
+        location: "Nyendo, Masaka district",
+        price: "UGX 4,500,000/month",
         status: "rent",
         type: "commercial",
-        area: "kikoni",
+        area: "nyendo",
         image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=250&fit=crop",
         gallery: [
             "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
@@ -301,115 +301,134 @@ const properties = [
             "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=600&fit=crop"
         ],
         features: ["500 sqm", "Office Space", "Internet Ready", "Parking", "Security"],
-        description: "Prime commercial building in Kikoni business district. Ideal for offices, retail stores, or mixed-use purposes. Excellent visibility and accessibility with modern amenities.",
-        coords: { lat: 0.3476, lng: 32.5726 },
+        description: "Prime commercial building in Nyendo business district. Ideal for offices, retail stores, or mixed-use purposes. Excellent visibility and accessibility with modern amenities.",
+        coords: { lat: -0.3450, lng: 31.7200 },
         featured: true
     },
     {
         id: 3,
-        name: "Prime Land - Makerere",
-        location: "Makerere University Area",
-        price: "UGX 300,000,000",
+        name: "Prime Land - Kyabakuza",
+        location: "Kyabakuza, Masaka district",
+        price: "UGX 250,000,000",
         status: "sale",
         type: "land",
-        area: "makerere",
+        area: "kyabakuza",
         image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=250&fit=crop",
         gallery: [
             "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop",
             "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop"
         ],
         features: ["50x100 ft", "Title Ready", "Tarmac Access", "Utilities Available"],
-        description: "Excellent investment opportunity near Makerere University. Perfect for residential or commercial development. Clear title deed and all necessary approvals in place.",
-        coords: { lat: 0.3315, lng: 32.5669 },
+        description: "Excellent investment opportunity in the developing Kyabakuza area. Perfect for residential or commercial development. Clear title deed and all necessary approvals in place.",
+        coords: { lat: -0.3250, lng: 31.7500 },
         featured: true
     },
     {
         id: 4,
-        name: "Luxury Apartment - Wandegeya",
-        location: "Wandegeya, Kampala",
-        price: "UGX 2,500,000/month",
+        name: "Luxury Apartment - Masaka Town",
+        location: "Masaka Town, Masaka district",
+        price: "UGX 2,000,000/month",
         status: "rent",
         type: "apartment",
-        area: "wandegeya",
+        area: "masaka_town",
         image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=250&fit=crop",
         gallery: [
             "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
             "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop"
         ],
         features: ["3 Beds", "2 Baths", "Balcony", "Furnished", "Security"],
-        description: "Modern fully furnished apartment in Wandegeya. Close to universities and business centers. Features contemporary design and all modern amenities.",
-        coords: { lat: 0.3410, lng: 32.5720 },
+        description: "Modern fully furnished apartment in Masaka Town. Close to shopping centers and business districts. Features contemporary design and all modern amenities.",
+        coords: { lat: -0.3340, lng: 31.7350 },
         featured: false
     },
     {
         id: 5,
-        name: "Family Home - Mulago",
-        location: "Mulago, Kampala",
-        price: "UGX 650,000,000",
+        name: "Family Home - Kijjabwemi",
+        location: "Kijjabwemi, Masaka district",
+        price: "UGX 550,000,000",
         status: "sale",
         type: "house",
-        area: "mulago",
+        area: "kijjabwemi",
         image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&h=250&fit=crop",
         gallery: [
             "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&h=600&fit=crop",
             "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop"
         ],
         features: ["5 Beds", "3 Baths", "2 Parking", "Large Compound"],
-        description: "Spacious family home in quiet Mulago neighborhood. Perfect for large families with ample space and privacy. Close to Mulago Hospital and schools.",
-        coords: { lat: 0.3365, lng: 32.5835 },
+        description: "Spacious family home in quiet Kijjabwemi neighborhood. Perfect for large families with ample space and privacy. Close to schools and local amenities.",
+        coords: { lat: -0.3150, lng: 31.7400 },
         featured: false
     },
     {
         id: 6,
-        name: "Student Hostel - Makerere",
-        location: "Makerere, Kampala",
-        price: "UGX 800,000/month",
-        status: "rent",
-        type: "apartment",
-        area: "makerere",
-        image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=400&h=250&fit=crop",
+        name: "Agricultural Land - Nyendo",
+        location: "Nyendo, Masaka district",
+        price: "UGX 120,000,000",
+        status: "sale",
+        type: "agricultural",
+        area: "nyendo",
+        image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=250&fit=crop",
         gallery: [
-            "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&h=600&fit=crop"
+            "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop"
         ],
-        features: ["1 Bed", "1 Bath", "Study Area", "Wi-Fi", "Security"],
-        description: "Affordable student accommodation near Makerere University. Perfect for students with study areas and high-speed internet connectivity.",
-        coords: { lat: 0.3290, lng: 32.5664 },
-        featured: false
+        features: ["5 Acres", "Fertile Soil", "Water Source", "Road Access"],
+        description: "Fertile agricultural land perfect for farming in Nyendo. The land has good access to water sources and is suitable for various crops including coffee, maize, and vegetables.",
+        coords: { lat: -0.3470, lng: 31.7180 },
+        featured: true
     },
     {
         id: 7,
-        name: "Office Complex - Kikoni",
-        location: "Kikoni Business District",
-        price: "UGX 1,200,000,000",
+        name: "Office Complex - Masaka Town",
+        location: "Masaka Town Business District",
+        price: "UGX 1,000,000,000",
         status: "sale",
         type: "commercial",
-        area: "kikoni",
+        area: "masaka_town",
         image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=400&h=250&fit=crop",
         gallery: [
             "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&h=600&fit=crop",
             "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop"
         ],
         features: ["1000 sqm", "Modern Design", "Elevator", "Parking", "Generator"],
-        description: "State-of-the-art office complex in prime Kikoni location. Features modern architecture, advanced facilities, and excellent accessibility.",
-        coords: { lat: 0.3485, lng: 32.5730 },
+        description: "State-of-the-art office complex in prime Masaka Town location. Features modern architecture, advanced facilities, and excellent accessibility.",
+        coords: { lat: -0.3320, lng: 31.7340 },
         featured: false
     },
     {
         id: 8,
-        name: "Residential Plot - Wandegeya",
-        location: "Wandegeya Road",
-        price: "UGX 180,000,000",
+        name: "Residential Plot - Kimaanya",
+        location: "Kimaanya, Masaka district",
+        price: "UGX 150,000,000",
         status: "sale",
         type: "land",
-        area: "wandegeya",
+        area: "kimaanya",
         image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=250&fit=crop",
         gallery: [
             "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop"
         ],
         features: ["25x50 ft", "Residential Zone", "Road Access", "Power Available"],
-        description: "Perfect residential plot for building your dream home. Located in developing Wandegeya area with good infrastructure and growth potential.",
-        coords: { lat: 0.3420, lng: 32.5715 },
+        description: "Perfect residential plot for building your dream home. Located in developing Kimaanya area with good infrastructure and growth potential.",
+        coords: { lat: -0.3400, lng: 31.7450 },
         featured: false
+    },
+    {
+        id: 9,
+        name: "Coffee Plantation - Kyabakuza",
+        location: "Kyabakuza, Masaka district",
+        price: "UGX 350,000,000",
+        status: "sale",
+        type: "agricultural",
+        area: "kyabakuza",
+        image: "https://images.unsplash.com/photo-1559629819-638a8f0a4303?w=400&h=250&fit=crop",
+        gallery: [
+            "https://images.unsplash.com/photo-1559629819-638a8f0a4303?w=800&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab12?w=800&h=600&fit=crop"
+        ],
+        features: ["10 Acres", "Mature Coffee Trees", "Processing Facility", "Caretaker House"],
+        description: "Established coffee plantation with mature Robusta coffee trees. Includes a small processing facility and caretaker's house. Great investment opportunity in Uganda's coffee sector.",
+        coords: { lat: -0.3260, lng: 31.7520 },
+        featured: true
     }
 ];
 
@@ -440,7 +459,7 @@ function createPropertyCard(property) {
             </div>
             <div class="property-info">
                 <h3>${property.name}</h3>
-                <p class="property-location"><i class="fas fa-map-marker-alt"></i> ${property.location}</p>
+                <p class="property-location" onclick="showLocationMap(${property.id}, event)" style="cursor: pointer;"><i class="fas fa-map-marker-alt"></i> ${property.location} <span style="font-size: 0.8em; color: #FFD700;">(tap to view map)</span></p>
                 <p class="property-price">${property.price}</p>
                 <div class="property-features">
                     ${property.features.slice(0, 3).map(feature => 
@@ -463,6 +482,10 @@ function getFeatureIcon(feature) {
     if (feature.includes('Security')) return 'shield-alt';
     if (feature.includes('Garden')) return 'tree';
     if (feature.includes('Pool')) return 'swimming-pool';
+    if (feature.includes('Acres')) return 'mountain';
+    if (feature.includes('Fertile') || feature.includes('Soil')) return 'seedling';
+    if (feature.includes('Water')) return 'tint';
+    if (feature.includes('Coffee')) return 'mug-hot';
     return 'check';
 }
 
@@ -478,8 +501,8 @@ function openPropertyDetail(propertyId) {
     document.getElementById('propertyDetailStatus').textContent = 
         currentProperty.status === 'sale' ? 'For Sale' : 'For Rent';
     document.getElementById('propertyDetailName').textContent = currentProperty.name;
-    document.getElementById('propertyDetailLocation').innerHTML = 
-        `<i class="fas fa-map-marker-alt"></i> ${currentProperty.location}`;
+    document.getElementById('propertyDetailLocation').innerHTML =
+        `<i class="fas fa-map-marker-alt"></i> <span onclick="showLocationMap(${currentProperty.id}, event)" style="cursor: pointer;">${currentProperty.location} <span style="font-size: 0.8em; color: #FFD700;">(tap to view map)</span></span>`;
     document.getElementById('propertyDetailPrice').textContent = currentProperty.price;
     
     // Features
@@ -660,7 +683,176 @@ document.addEventListener('DOMContentLoaded', () => {
     animateOnScroll();
     
     console.log('Smart Space website loaded successfully!');
+    
+    // Create map modal
+    createMapModal();
+    
+    // Add CSS for map modal
+    const mapModalStyle = document.createElement('style');
+    mapModalStyle.textContent = `
+        #mapModal {
+            display: none;
+            position: fixed;
+            z-index: 10001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s ease;
+        }
+        
+        #mapModal .modal-content {
+            background-color: var(--white);
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: slideIn 0.3s ease;
+        }
+        
+        #mapModal .modal-header {
+            background: var(--primary-gold);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            border-radius: 15px 15px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        #mapModal .modal-body {
+            padding: 2rem;
+        }
+        
+        #locationMap {
+            height: 400px;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    `;
+    document.head.appendChild(mapModalStyle);
 });
+
+// Create Map Modal
+function createMapModal() {
+    // Check if modal already exists
+    if (document.getElementById('mapModal')) return;
+    
+    const mapModal = document.createElement('div');
+    mapModal.id = 'mapModal';
+    mapModal.className = 'modal';
+    mapModal.innerHTML = `
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="mapModalTitle">Location Map</h2>
+                <span class="close" id="closeMapModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="locationMap" style="height: 400px; width: 100%;"></div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(mapModal);
+    
+    // Close map modal
+    document.getElementById('closeMapModal').addEventListener('click', () => {
+        document.getElementById('mapModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+    
+    // Close on outside click
+    window.addEventListener('click', (e) => {
+        const mapModal = document.getElementById('mapModal');
+        if (e.target === mapModal) {
+            mapModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Show Location Map
+function showLocationMap(propertyId, event) {
+    // Prevent the click from bubbling up to the property card
+    if (event) {
+        event.stopPropagation();
+    }
+    
+    console.log('showLocationMap called for property ID:', propertyId);
+    
+    // Find the property
+    const property = properties.find(p => p.id === propertyId);
+    if (!property || !property.coords) {
+        console.error('Property not found or missing coordinates:', propertyId);
+        return;
+    }
+    
+    console.log('Property found:', property.name, 'with coords:', property.coords);
+    
+    // Create map modal if it doesn't exist
+    if (!document.getElementById('mapModal')) {
+        console.log('Creating new map modal');
+        createMapModal();
+    }
+    
+    // Set the modal title
+    document.getElementById('mapModalTitle').textContent = `Location: ${property.location}`;
+    
+    // Show the modal
+    const mapModal = document.getElementById('mapModal');
+    mapModal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    
+    console.log('Map modal displayed');
+    
+    // Initialize the map with a slight delay to ensure the modal is visible
+    setTimeout(() => {
+        const mapElement = document.getElementById('locationMap');
+        if (!mapElement) {
+            console.error('Map element not found');
+            return;
+        }
+        
+        console.log('Initializing map in element:', mapElement);
+        
+        try {
+            const locationMap = new google.maps.Map(mapElement, {
+                center: property.coords,
+                zoom: 15,
+                styles: [
+                    {
+                        featureType: 'poi',
+                        elementType: 'labels',
+                        stylers: [{ visibility: 'off' }]
+                    }
+                ]
+            });
+            
+            // Create marker
+            new google.maps.Marker({
+                position: property.coords,
+                map: locationMap,
+                title: property.name,
+                icon: {
+                    url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#FFD700">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    `),
+                    scaledSize: new google.maps.Size(40, 40)
+                }
+            });
+            
+            console.log('Map initialized successfully');
+        } catch (error) {
+            console.error('Error initializing map:', error);
+        }
+    }, 500); // Increased timeout to ensure modal is fully visible
+}
 
 // Performance optimization: Throttle scroll events
 let ticking = false;
@@ -673,6 +865,11 @@ function throttleScroll() {
         ticking = true;
     }
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  createMapModal(); // Ensures the modal is available before any button is clicked
+});
+
 
 window.addEventListener('scroll', throttleScroll);
 
