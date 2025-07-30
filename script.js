@@ -7,7 +7,287 @@ navToggle.addEventListener('click', () => {
     navToggle.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a link
+// Sample land property data
+const landProperties = [
+    {
+        id: 1,
+        name: "Prime Agricultural Land",
+        location: "Nyendo, Masaka",
+        price: "UGX 150M",
+        type: "agricultural",
+        status: "For Sale",
+        size: "5 Acres",
+        features: [
+            "Fertile Black Cotton Soil",
+            "Natural Water Spring",
+            "All-Weather Road Access",
+            "3-Phase Power Connection",
+            "Gentle Slope (5%)",
+            "No Land Disputes",
+            "Clean Title Deed",
+            "Suitable for Mixed Farming"
+        ],
+        description: "Premium agricultural land with rich soil composition perfect for both crop farming and animal husbandry. Features natural water sources and excellent drainage. Recent soil tests confirm high fertility levels. Fully surveyed with beacons in place.",
+        terrainType: "Gently Sloping",
+        soilType: "Black Cotton",
+        waterSources: ["Natural Spring", "Seasonal Stream"],
+        image: "assets/land1.jpeg"
+    },
+    {
+        id: 2,
+        name: "Commercial Plot",
+        location: "Masaka Town Center",
+        price: "UGX 300M",
+        type: "commercial",
+        status: "For Sale",
+        size: "0.5 Acres",
+        features: [
+            "Prime Corner Plot",
+            "40m Main Road Frontage",
+            "Commercial Zone Approved",
+            "Water & Electricity Connected",
+            "High Traffic Location",
+            "Paved Access Road",
+            "Ready Building Permits",
+            "Suitable for Multi-story"
+        ],
+        description: "Strategic commercial plot in Masaka's prime business district. Approved for commercial development up to 4 floors. All utilities connected and building permits pre-approved. Perfect for retail, office space, or mixed-use development.",
+        zoning: "C1 Commercial",
+        roadFrontage: "40 meters",
+        buildingRestrictions: "Up to 4 floors",
+        image: "assets/land2.jpg"
+    },
+    {
+        id: 3,
+        name: "Residential Development Land",
+        location: "Kyabakuza",
+        price: "UGX 200M",
+        type: "residential",
+        status: "For Development",
+        size: "2 Acres",
+        features: [
+            "Gated Community",
+            "Residential Zoning",
+            "Schools Within 1KM",
+            "Underground Utilities",
+            "Perimeter Wall Ready",
+            "Flat Terrain",
+            "Ready for Construction",
+            "Security Post"
+        ],
+        description: "Premium residential plot in an upcoming gated community. Perfect for luxury home development. All infrastructure work completed including underground power lines and water connections. Security features in place.",
+        plotRatio: "40% maximum coverage",
+        soilBearing: "Good for foundations",
+        securityFeatures: ["Perimeter Wall", "Guard House"],
+        image: "assets/WhatsApp Image 2025-07-30 at 10.48.28_6a5236ef.jpg"
+    },
+    {
+        id: 4,
+        name: "Industrial Land Plot",
+        location: "Kijjabwemi Industrial Area",
+        price: "UGX 450M",
+        type: "industrial",
+        status: "For Sale",
+        size: "3 Acres",
+        features: [
+            "Industrial Zone Approved",
+            "Heavy-Duty Power Line",
+            "Large Water Storage",
+            "Waste Management System",
+            "Loading Bays Area",
+            "Staff Housing Provision",
+            "Environmental Clearance",
+            "Truck Access Route"
+        ],
+        description: "Strategic industrial plot with all necessary approvals and infrastructure for immediate factory setup. Features include heavy-duty power connection, waste management systems, and excellent logistics access.",
+        zoning: "Industrial Zone",
+        powerSupply: "100KVA Dedicated",
+        environmentalClearance: "Approved",
+        image: "assets/WhatsApp Image 2025-07-30 at 10.52.36_6cdc40c4.jpg"
+    },
+    {
+        id: 5,
+        name: "Mixed-Use Development Land",
+        location: "Kimaanya",
+        price: "UGX 280M",
+        type: "commercial",
+        status: "For Development",
+        size: "1.5 Acres",
+        features: [
+            "Mixed-Use Zoning",
+            "Corner Position",
+            "Two Road Access",
+            "High Population Density",
+            "Public Transport Hub",
+            "Market Proximity",
+            "Development Ready",
+            "Multiple Entry Points"
+        ],
+        description: "Versatile plot suitable for mixed-use development combining commercial and residential spaces. Located in a rapidly developing area with high foot traffic and excellent connectivity.",
+        zoning: "Mixed Commercial-Residential",
+        accessibility: "Dual Road Access",
+        marketPotential: "High Growth Area",
+        image: "assets/WhatsApp Image 2025-07-30 at 10.56.02_edcb7ec3.jpg"
+    }
+];
+
+// Function to create property card HTML
+function createPropertyCard(property) {
+    // Get the first 4 features to display on the card
+    const displayFeatures = property.features.slice(0, 4);
+    
+    return `
+        <div class="property-card" data-id="${property.id}">
+            <div class="property-image">
+                <img src="${property.image}" alt="${property.name}" loading="lazy">
+                <div class="property-status">${property.status}</div>
+            </div>
+            <div class="property-info">
+                <h3>${property.name}</h3>
+                <p class="property-location"><i class="fas fa-map-marker-alt"></i> ${property.location}</p>
+                <p class="property-price">${property.price}</p>
+                <div class="property-key-details">
+                    <span><i class="fas fa-ruler-combined"></i> ${property.size}</span>
+                    <span><i class="fas fa-map"></i> ${property.type}</span>
+                </div>
+                <div class="property-features">
+                    ${displayFeatures.map(feature => `
+                        <span><i class="fas fa-check"></i> ${feature}</span>
+                    `).join('')}
+                </div>
+                <button class="view-details-btn">View Details</button>
+            </div>
+        </div>
+    `;
+}
+
+// Function to populate featured properties
+function populateFeaturedProperties() {
+    const featuredContainer = document.getElementById('featuredProperties');
+    const allPropertiesGrid = document.getElementById('allPropertiesGrid');
+    
+    if (featuredContainer) {
+        // Create property cards for featured properties
+        featuredContainer.innerHTML = landProperties
+            .map(property => createPropertyCard(property))
+            .join('');
+    }
+
+    // Also populate all properties grid if it exists
+    if (allPropertiesGrid) {
+        allPropertiesGrid.innerHTML = landProperties
+            .map(property => createPropertyCard(property))
+            .join('');
+    }
+
+    // Add event listeners for filters
+    const typeFilter = document.getElementById('typeFilter');
+    const statusFilter = document.getElementById('statusFilter');
+    const locationFilter = document.getElementById('locationFilter');
+    const searchInput = document.getElementById('searchInput');
+    const viewAllBtn = document.getElementById('viewAllBtn');
+
+    function filterProperties() {
+        const typeValue = typeFilter.value.toLowerCase();
+        const statusValue = statusFilter.value.toLowerCase();
+        const locationValue = locationFilter.value.toLowerCase();
+        const searchValue = searchInput.value.toLowerCase();
+
+        const filteredProperties = landProperties.filter(property => {
+            const matchesType = !typeValue || property.type.toLowerCase() === typeValue;
+            const matchesStatus = !statusValue || property.status.toLowerCase().includes(statusValue);
+            const matchesLocation = !locationValue || property.location.toLowerCase().includes(locationValue.replace('_', ' '));
+            const matchesSearch = !searchValue || 
+                property.name.toLowerCase().includes(searchValue) ||
+                property.description.toLowerCase().includes(searchValue) ||
+                property.location.toLowerCase().includes(searchValue);
+
+            return matchesType && matchesStatus && matchesLocation && matchesSearch;
+        });
+
+        // Update featured properties
+        featuredContainer.innerHTML = filteredProperties
+            .map(property => createPropertyCard(property))
+            .join('');
+    }
+
+    // Add event listeners for filters
+    typeFilter.addEventListener('change', filterProperties);
+    statusFilter.addEventListener('change', filterProperties);
+    locationFilter.addEventListener('change', filterProperties);
+    searchInput.addEventListener('input', filterProperties);
+
+    // View All button functionality
+    if (viewAllBtn) {
+        viewAllBtn.addEventListener('click', function() {
+            const modal = document.getElementById('allPropertiesModal');
+            if (modal) {
+                modal.style.display = 'block';
+            }
+        });
+    }
+}
+
+// Function to show property details
+function showPropertyDetails(property) {
+    const modal = document.getElementById('propertyDetailModal');
+    const title = document.getElementById('propertyDetailTitle');
+    const img = document.getElementById('propertyDetailImg');
+    const status = document.getElementById('propertyDetailStatus');
+    const name = document.getElementById('propertyDetailName');
+    const location = document.getElementById('propertyDetailLocation');
+    const price = document.getElementById('propertyDetailPrice');
+    const features = document.getElementById('propertyDetailFeatures');
+    const description = document.getElementById('propertyDetailDescription');
+
+    title.textContent = property.name;
+    img.src = property.image;
+    status.textContent = property.status;
+    name.textContent = property.name;
+    location.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${property.location}`;
+    price.textContent = property.price;
+    
+    features.innerHTML = property.features
+        .map(feature => `<span><i class="fas fa-check"></i> ${feature}</span>`)
+        .join('');
+    
+    description.innerHTML = `<h4>Description</h4><p>${property.description}</p>`;
+    
+    modal.style.display = 'block';
+}
+
+// Event Listeners
+document.addEventListener('DOMContentLoaded', function() {
+    // Populate featured properties
+    populateFeaturedProperties();
+    
+    // Property card click handlers
+    document.getElementById('featuredProperties').addEventListener('click', function(e) {
+        const propertyCard = e.target.closest('.property-card');
+        if (propertyCard) {
+            const propertyId = parseInt(propertyCard.dataset.id);
+            const property = landProperties.find(p => p.id === propertyId);
+            if (property) {
+                showPropertyDetails(property);
+            }
+        }
+    });
+
+    // Close modal handlers
+    const closeButtons = document.querySelectorAll('.close');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.closest('.modal').style.display = 'none';
+        });
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', function(e) {
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
+        }
+    });
+});
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -269,166 +549,113 @@ propertyImages.forEach((img, index) => {
 const properties = [
     {
         id: 1,
-        name: "Modern Villa - Masaka Town",
-        location: "Masaka Town, Masaka district",
-        price: "UGX 750,000,000",
+        name: "Prime Agricultural Land",
+        location: "Nyendo, Masaka district",
+        price: "UGX 150M",
         status: "sale",
-        type: "house",
-        area: "masaka_town",
-        image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=250&fit=crop",
+        type: "agricultural",
+        area: "nyendo",
+        image: "assets/land1.jpeg",
         gallery: [
-            "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop"
+            "assets/land1.jpeg"
         ],
-        features: ["4 Beds", "3 Baths", "2 Parking", "Garden", "Swimming Pool"],
-        description: "Luxurious modern villa located in the heart of Masaka Town. Features contemporary design with high-end finishes, spacious rooms, and beautiful garden views. Perfect for families seeking comfort and elegance.",
+        features: [
+            "5 Acres",
+            "Fertile Black Cotton Soil",
+            "Natural Water Spring",
+            "All-Weather Road Access"
+        ],
+        description: "Premium agricultural land with rich soil composition perfect for both crop farming and animal husbandry. Features natural water sources and excellent drainage. Recent soil tests confirm high fertility levels.",
         coords: { lat: -0.3333, lng: 31.7333 },
         featured: true
     },
     {
         id: 2,
-        name: "Commercial Building - Nyendo",
-        location: "Nyendo, Masaka district",
-        price: "UGX 4,500,000/month",
-        status: "rent",
+        name: "Commercial Plot",
+        location: "Masaka Town Center",
+        price: "UGX 300M",
+        status: "sale",
         type: "commercial",
-        area: "nyendo",
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=250&fit=crop",
+        area: "masaka_town",
+        image: "assets/land2.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=600&fit=crop"
+            "assets/land2.jpg"
         ],
-        features: ["500 sqm", "Office Space", "Internet Ready", "Parking", "Security"],
-        description: "Prime commercial building in Nyendo business district. Ideal for offices, retail stores, or mixed-use purposes. Excellent visibility and accessibility with modern amenities.",
+        features: [
+            "0.5 Acres",
+            "Prime Corner Plot",
+            "40m Main Road Frontage",
+            "Commercial Zone Approved"
+        ],
+        description: "Strategic commercial plot in Masaka's prime business district. Approved for commercial development up to 4 floors. All utilities connected and building permits pre-approved.",
         coords: { lat: -0.3450, lng: 31.7200 },
         featured: true
     },
     {
         id: 3,
-        name: "Prime Land - Kyabakuza",
+        name: "Residential Development Land",
         location: "Kyabakuza, Masaka district",
-        price: "UGX 250,000,000",
-        status: "sale",
-        type: "land",
+        price: "UGX 200M",
+        status: "development",
+        type: "residential",
         area: "kyabakuza",
-        image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=250&fit=crop",
+        image: "assets/a1.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop"
+            "assets/a1.jpg"
         ],
-        features: ["50x100 ft", "Title Ready", "Tarmac Access", "Utilities Available"],
-        description: "Excellent investment opportunity in the developing Kyabakuza area. Perfect for residential or commercial development. Clear title deed and all necessary approvals in place.",
+        features: [
+            "2 Acres",
+            "Residential Zoning",
+            "Schools Within 1KM",
+            "Underground Utilities"
+        ],
+        description: "Premium residential plot in an upcoming gated community. Perfect for luxury home development. All infrastructure work completed including underground power lines.",
         coords: { lat: -0.3250, lng: 31.7500 },
         featured: true
     },
     {
         id: 4,
-        name: "Luxury Apartment - Masaka Town",
-        location: "Masaka Town, Masaka district",
-        price: "UGX 2,000,000/month",
-        status: "rent",
-        type: "apartment",
-        area: "masaka_town",
-        image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=250&fit=crop",
+        name: "Industrial Land Plot",
+        location: "Kijjabwemi Industrial Area",
+        price: "UGX 450M",
+        status: "sale",
+        type: "industrial",
+        area: "kijjabwemi",
+        image: "assets/land2.jpg",
         gallery: [
-            "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop"
+            "assets/land2.jpg"
         ],
-        features: ["3 Beds", "2 Baths", "Balcony", "Furnished", "Security"],
-        description: "Modern fully furnished apartment in Masaka Town. Close to shopping centers and business districts. Features contemporary design and all modern amenities.",
+        features: [
+            "3 Acres",
+            "Industrial Zone Approved",
+            "Heavy-Duty Power Line",
+            "Waste Management System"
+        ],
+        description: "Strategic industrial plot with all necessary approvals and infrastructure for immediate factory setup. Features include heavy-duty power connection.",
         coords: { lat: -0.3340, lng: 31.7350 },
         featured: false
     },
     {
         id: 5,
-        name: "Family Home - Kijjabwemi",
-        location: "Kijjabwemi, Masaka district",
-        price: "UGX 550,000,000",
-        status: "sale",
-        type: "house",
-        area: "kijjabwemi",
-        image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&h=250&fit=crop",
+        name: "Mixed-Use Development Land",
+        location: "Kimaanya",
+        price: "UGX 280M",
+        status: "development",
+        type: "commercial",
+        area: "kimaanya",
+        image: "assets/land1.jpeg",
         gallery: [
-            "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop"
+            "assets/land1.jpeg"
         ],
-        features: ["5 Beds", "3 Baths", "2 Parking", "Large Compound"],
-        description: "Spacious family home in quiet Kijjabwemi neighborhood. Perfect for large families with ample space and privacy. Close to schools and local amenities.",
+        features: [
+            "1.5 Acres",
+            "Mixed-Use Zoning",
+            "Two Road Access",
+            "High Population Area"
+        ],
+        description: "Versatile plot suitable for mixed-use development combining commercial and residential spaces. Located in a rapidly developing area with high foot traffic.",
         coords: { lat: -0.3150, lng: 31.7400 },
         featured: false
-    },
-    {
-        id: 6,
-        name: "Agricultural Land - Nyendo",
-        location: "Nyendo, Masaka district",
-        price: "UGX 120,000,000",
-        status: "sale",
-        type: "agricultural",
-        area: "nyendo",
-        image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=250&fit=crop",
-        gallery: [
-            "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop"
-        ],
-        features: ["5 Acres", "Fertile Soil", "Water Source", "Road Access"],
-        description: "Fertile agricultural land perfect for farming in Nyendo. The land has good access to water sources and is suitable for various crops including coffee, maize, and vegetables.",
-        coords: { lat: -0.3470, lng: 31.7180 },
-        featured: true
-    },
-    {
-        id: 7,
-        name: "Office Complex - Masaka Town",
-        location: "Masaka Town Business District",
-        price: "UGX 1,000,000,000",
-        status: "sale",
-        type: "commercial",
-        area: "masaka_town",
-        image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=400&h=250&fit=crop",
-        gallery: [
-            "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop"
-        ],
-        features: ["1000 sqm", "Modern Design", "Elevator", "Parking", "Generator"],
-        description: "State-of-the-art office complex in prime Masaka Town location. Features modern architecture, advanced facilities, and excellent accessibility.",
-        coords: { lat: -0.3320, lng: 31.7340 },
-        featured: false
-    },
-    {
-        id: 8,
-        name: "Residential Plot - Kimaanya",
-        location: "Kimaanya, Masaka district",
-        price: "UGX 150,000,000",
-        status: "sale",
-        type: "land",
-        area: "kimaanya",
-        image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=250&fit=crop",
-        gallery: [
-            "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop"
-        ],
-        features: ["25x50 ft", "Residential Zone", "Road Access", "Power Available"],
-        description: "Perfect residential plot for building your dream home. Located in developing Kimaanya area with good infrastructure and growth potential.",
-        coords: { lat: -0.3400, lng: 31.7450 },
-        featured: false
-    },
-    {
-        id: 9,
-        name: "Coffee Plantation - Kyabakuza",
-        location: "Kyabakuza, Masaka district",
-        price: "UGX 350,000,000",
-        status: "sale",
-        type: "agricultural",
-        area: "kyabakuza",
-        image: "https://images.unsplash.com/photo-1559629819-638a8f0a4303?w=400&h=250&fit=crop",
-        gallery: [
-            "https://images.unsplash.com/photo-1559629819-638a8f0a4303?w=800&h=600&fit=crop",
-            "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab12?w=800&h=600&fit=crop"
-        ],
-        features: ["10 Acres", "Mature Coffee Trees", "Processing Facility", "Caretaker House"],
-        description: "Established coffee plantation with mature Robusta coffee trees. Includes a small processing facility and caretaker's house. Great investment opportunity in Uganda's coffee sector.",
-        coords: { lat: -0.3260, lng: 31.7520 },
-        featured: true
     }
 ];
 
