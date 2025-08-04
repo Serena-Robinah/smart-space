@@ -1,418 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Space - Land & Property Evaluation</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL9J6cmsrHHFwwdX6AFUg9YQ01jkva1Mo"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Smart Space</h2>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#team" class="nav-link">Team</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#properties" class="nav-link">Properties</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>Smart Space</h2>
         </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#team" class="nav-link">Team</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#properties" class="nav-link">Properties</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to Smart Space</h1>
-      <p>Smarter Land Evaluation for Smarter Decisions</p>
-      <a href="#services" class="btn">Explore Services</a>
-    </div>
-  </section>
+      <div class="hero-content">
+        <h1>Welcome to Smart Space</h1>
+        <p>Smarter Land Evaluation for Smarter Decisions</p>
+        <a href="#services" class="btn btn-primary">Explore Services</a>
+      </div>
+    </section>
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Smart Space</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Welcome to SmartSpace –!Smarter Land Evaluation for Smarter Decisions!</p>
-                    <p>Smart Space is revolutionizing land and property evaluation in Masaka and surrounding regions. 
-        Using technology-driven insights, we empower clients to make smarter land investment decisions with confidence.</p>
-        <p><strong>Our core services include:</strong> instant digital valuations and direct connection between the buyers and sellers</p>
-                    <p>Whether you're buying, selling, or investing in land, SmartSpace gives you the tools to make data-driven decisions with confidence.
-Our innovative platform uses smart technology to evaluate land based on visible features such as location, infrastructure, nearby amenities, and surroundings. With just a tap on the map, get an instant estimated value of any plot — no need for manual calculations or guesswork.</p>
-                    <div class="features">
-                        <div class="feature">
-                            <i class="fas fa-chart-line"></i>
-                            <h3>📍 Instant Land Valuation</h3>
-                            <p>Tap on any location on the map to get an estimated price based on surrounding infrastructure, land use, and access.</p>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-home"></i>
-                            <h3>🗺️ Map-Based Exploration</h3>
-                            <p>Interact with our map to evaluate land potential based on visible features like roads, schools, markets, or water bodies.</p>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-map"></i>
-                            <h3>Land Document Submission</h3>
-                            <p>Sellers can upload title documents and other land info to get an expert-backed value estimate.</p>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">About Smart Space</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Welcome to SmartSpace –!Smarter Land Evaluation for Smarter
+              Decisions!
+            </p>
+            <p>
+              Smart Space is revolutionizing land and property evaluation in
+              Masaka and surrounding regions. Using technology-driven insights,
+              we empower clients to make smarter land investment decisions with
+              confidence.
+            </p>
+            <p>
+              <strong>Our core services include:</strong> instant digital
+              valuations and direct connection between the buyers and sellers
+            </p>
+            <p>
+              Whether you're buying, selling, or investing in land, SmartSpace
+              gives you the tools to make data-driven decisions with confidence.
+              Our innovative platform uses smart technology to evaluate land
+              based on visible features such as location, infrastructure, nearby
+              amenities, and surroundings. With just a tap on the map, get an
+              instant estimated value of any plot — no need for manual
+              calculations or guesswork.
+            </p>
+            <div class="features">
+              <div class="feature">
+                <i class="fas fa-chart-line"></i>
+                <h3>📍 Instant Land Valuation</h3>
+                <p>
+                  Tap on any location on the map to get an estimated price based
+                  on surrounding infrastructure, land use, and access.
+                </p>
+              </div>
+              <div class="feature">
+                <i class="fas fa-home"></i>
+                <h3>🗺️ Map-Based Exploration</h3>
+                <p>
+                  Interact with our map to evaluate land potential based on
+                  visible features like roads, schools, markets, or water
+                  bodies.
+                </p>
+              </div>
+              <div class="feature">
+                <i class="fas fa-map"></i>
+                <h3>Land Document Submission</h3>
+                <p>
+                  Sellers can upload title documents and other land info to get
+                  an expert-backed value estimate.
+                </p>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Team Section -->
     <section id="team" class="team">
-        <div class="container">
-            <h2 class="section-title">Our Expert Team</h2>
-            <p class="team-intro">Meet our experienced professionals dedicated to making sure the system  provides accurate property evaluations</p>
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="assets/WhatsApp Image 2025-07-30 at 10.56.02_edcb7ec3.jpg" alt="John Mugisha" loading="lazy">
-                    </div>
-                    <div class="member-info">
-                        <h3>SERENA ROBINAH</h3>
-                        <p class="member-role"> Property Valuator</p>
-                        <!--<p class="member-description">15+ years experience in property valuation with expertise in residential and commercial properties.</p>-->
-                        <div class="member-qualifications">
-                            <span>BSc. Computer Science</span>
-                            <span>Certified Valuator</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="assets/moris.jpg" alt="Not found" loading="lazy">
-                    </div>
-                    <div class="member-info">
-                        <h3>ABINSINGUZA MORISON K</h3>
-                        <p class="member-role"> Property Valuator</p>
-                        <!--<p class="member-description">Professional land surveyor specializing in boundary determination and topographic surveys.</p>-->
-                        <div class="member-qualifications">
-                            <span>BSc. Computer Science</span>
-                            <span>Certified Valuator</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="assets/WhatsApp Image 2025-07-30 at 10.48.28_6a5236ef.jpg" alt="Not found" loading="lazy">
-                    </div>
-                    <div class="member-info">
-                        <h3>AKANDWANAHO JONAN</h3>
-                        <p class="member-role"> Property Valuator</p>
-                        <!--<p class="member-description">Expert in real estate investment analysis and market research with focus on Masaka region.</p>-->
-                        <div class="member-qualifications">
-                            <span>Bsc.Computer Science</span>
-                            <span>Certified Valuator</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="assets/dorcus.jpg" alt="Not found" loading="lazy">
-                    </div>
-                    <div class="member-info">
-                        <h3>LUNKUSE DORCUS</h3>
-                        <p class="member-role"> Property Valuator</p>
-                        <!--<p class="member-description">Legal expert ensuring all property transactions comply with Ugandan property laws.</p>-->
-                        <div class="member-qualifications">
-                            <span>Bsc. Computer Science</span>
-                            <span>Certified Valuator</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="assets/WhatsApp Image 2025-07-30 at 10.52.36_6cdc40c4.jpg" alt="David Ssebunya" loading="lazy">
-                    </div>
-                    <div class="member-info">
-                        <h3>BIAR ELIJAH MABIOR</h3>
-                        <p class="member-role"> Property Valuator</p>
-                        <!--<p class="member-description">Expert in real estate investment analysis and market research with focus on Masaka region.</p>-->
-                        <div class="member-qualifications">
-                            <span>Bsc. Computer Science</span>
-                            <span>Certified Valuator</span>
-                        </div>
-                    </div>
-                </div>
-
-
+      <div class="container">
+        <h2 class="section-title">Our Expert Team</h2>
+        <p class="team-intro">
+          Meet our experienced professionals dedicated to making sure the system
+          provides accurate property evaluations
+        </p>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-image">
+              <img
+                src="assets/WhatsApp Image 2025-07-30 at 10.56.02_edcb7ec3.jpg"
+                alt="John Mugisha"
+                loading="lazy"
+              />
             </div>
+            <div class="member-info">
+              <h3>SERENA ROBINAH</h3>
+              <p class="member-role">Property Valuator</p>
+              <!--<p class="member-description">15+ years experience in property valuation with expertise in residential and commercial properties.</p>-->
+              <div class="member-qualifications">
+                <span>BSc. Computer Science</span>
+                <span>Certified Valuator</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-image">
+              <img src="assets/moris.jpg" alt="Not found" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>ABINSINGUZA MORISON K</h3>
+              <p class="member-role">Property Valuator</p>
+              <!--<p class="member-description">Professional land surveyor specializing in boundary determination and topographic surveys.</p>-->
+              <div class="member-qualifications">
+                <span>BSc. Computer Science</span>
+                <span>Certified Valuator</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-image">
+              <img
+                src="assets/WhatsApp Image 2025-07-30 at 10.48.28_6a5236ef.jpg"
+                alt="Not found"
+                loading="lazy"
+              />
+            </div>
+            <div class="member-info">
+              <h3>AKANDWANAHO JONAN</h3>
+              <p class="member-role">Property Valuator</p>
+              <!--<p class="member-description">Expert in real estate investment analysis and market research with focus on Masaka region.</p>-->
+              <div class="member-qualifications">
+                <span>Bsc.Computer Science</span>
+                <span>Certified Valuator</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-image">
+              <img src="assets/dorcus.jpg" alt="Not found" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>LUNKUSE DORCUS</h3>
+              <p class="member-role">Property Valuator</p>
+              <!--<p class="member-description">Legal expert ensuring all property transactions comply with Ugandan property laws.</p>-->
+              <div class="member-qualifications">
+                <span>Bsc. Computer Science</span>
+                <span>Certified Valuator</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-image">
+              <img
+                src="assets/WhatsApp Image 2025-07-30 at 10.52.36_6cdc40c4.jpg"
+                alt="David Ssebunya"
+                loading="lazy"
+              />
+            </div>
+            <div class="member-info">
+              <h3>BIAR ELIJAH MABIOR</h3>
+              <p class="member-role">Property Valuator</p>
+              <!--<p class="member-description">Expert in real estate investment analysis and market research with focus on Masaka region.</p>-->
+              <div class="member-qualifications">
+                <span>Bsc. Computer Science</span>
+                <span>Certified Valuator</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <!-- Services Section -->
-<section id="services" class="section services-section">
-    <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <i class="fas fa-calculator"></i>
-          <h3>Property Valuation</h3>
-          <p>Receive accurate valuations for residential, commercial, or agricultural properties using local data and expert review.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-map-marked-alt"></i>
-          <h3>Land Survey</h3>
-          <p>Get precise boundary and topographic surveys for land development, buying, or dispute resolution.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-chart-line"></i>
-          <h3>Investment Analysis</h3>
-          <p>Explore land or property investment potential with our data-driven market studies and feasibility reviews.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-balance-scale"></i>
-          <h3>Legal Compliance</h3>
-          <p>Ensure your land transactions meet Ugandan legal standards through document checks and expert guidance.</p>
+    <section id="services" class="section services-section">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-calculator"></i>
+            <h3>Property Valuation</h3>
+            <p>
+              Receive accurate valuations for residential, commercial, or
+              agricultural properties using local data and expert review.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-map-marked-alt"></i>
+            <h3>Land Survey</h3>
+            <p>
+              Get precise boundary and topographic surveys for land development,
+              buying, or dispute resolution.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Investment Analysis</h3>
+            <p>
+              Explore land or property investment potential with our data-driven
+              market studies and feasibility reviews.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-balance-scale"></i>
+            <h3>Legal Compliance</h3>
+            <p>
+              Ensure your land transactions meet Ugandan legal standards through
+              document checks and expert guidance.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
     <!-- Properties Section -->
     <section id="properties" class="properties">
-        <div class="container">
-            <h2 class="section-title">Available Land</h2>
-            
-            <!-- Property Filters -->
-            <div class="property-filters">
-                <div class="filter-group">
-                    <select id="typeFilter">
-                        <option value="">All Land Types</option>
-                        <option value="agricultural">Agricultural Land</option>
-                        <option value="commercial">Commercial Land</option>
-                        <option value="residential">Residential Land</option>
-                        <option value="industrial">Industrial Land</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <select id="statusFilter">
-                        <option value="">All Status</option>
-                        <option value="sale">For Sale</option>
-                        <option value="lease">For Lease</option>
-                        <option value="development">For Development</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <select id="locationFilter">
-                        <option value="">All Locations</option>
-                        <option value="masaka_town">Masaka Town</option>
-                        <option value="nyendo">Nyendo</option>
-                        <option value="kyabakuza">Kyabakuza</option>
-                        <option value="kijjabwemi">Kijjabwemi</option>
-                        <option value="kimaanya">Kimaanya</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <input type="text" id="searchInput" placeholder="Search properties...">
-                </div>
-                <button class="btn btn-primary" id="viewAllBtn">View All Properties</button>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Available Land</h2>
 
-            <!-- Featured Properties -->
-            <h3 class="featured-title">Featured Land Listings</h3>
-            <div class="properties-grid" id="featuredProperties">
-                <!-- Featured properties will be loaded here -->
-            </div>
-
-            <!-- All Properties Modal -->
-            <div id="allPropertiesModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2>All Available Land</h2>
-                        <span class="close" id="closeModal">&times;</span>
-                    </div>
-                    <div class="modal-body">
-                        <div class="properties-grid" id="allPropertiesGrid">
-                            <!-- All properties will be loaded here -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Property Detail Modal -->
-            <div id="propertyDetailModal" class="modal">
-                <div class="modal-content property-detail-content">
-                    <div class="modal-header">
-                        <h2 id="propertyDetailTitle">Property Details</h2>
-                        <span class="close" id="closePropertyDetail">&times;</span>
-                    </div>
-                    <div class="modal-body">
-                        <div class="property-detail-grid">
-                            <div class="property-detail-left">
-                                <div class="property-detail-image">
-                                    <img id="propertyDetailImg" src="" alt="">
-                                    <div class="property-detail-status" id="propertyDetailStatus"></div>
-                                </div>
-                                <div class="property-gallery">
-                                    <div class="gallery-images" id="propertyGallery">
-                                        <!-- Additional images will be loaded here -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="property-detail-right">
-                                <div class="property-detail-info">
-                                    <h3 id="propertyDetailName"></h3>
-                                    <p class="property-detail-location" id="propertyDetailLocation"></p>
-                                    <p class="property-detail-price" id="propertyDetailPrice"></p>
-                                    <div class="property-detail-features" id="propertyDetailFeatures"></div>
-                                    <div class="property-detail-description" id="propertyDetailDescription"></div>
-                                    
-                                    <div class="property-actions">
-                                        <button class="btn btn-primary" id="buyPropertyBtn">
-                                            <i class="fas fa-shopping-cart"></i> Buy Now
-                                        </button>
-                                        <button class="btn btn-secondary" id="contactPropertyBtn">
-                                            <i class="fas fa-phone"></i> Contact Agent
-                                        </button>
-                                        <button class="btn btn-outline" id="scheduleViewingBtn">
-                                            <i class="fas fa-calendar"></i> Schedule Viewing
-                                        </button>
-                                    </div>
-                                </div>
-                                
-                                <!-- Property Map -->
-                                <div class="property-map-container">
-                                    <h4>Location</h4>
-                                    <div id="propertyMap" class="property-map"></div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Property Filters -->
+        <div class="property-filters">
+          <div class="filter-group">
+            <select id="typeFilter">
+              <option value="">All Land Types</option>
+              <option value="agricultural">Agricultural Land</option>
+              <option value="commercial">Commercial Land</option>
+              <option value="residential">Residential Land</option>
+              <option value="industrial">Industrial Land</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <select id="statusFilter">
+              <option value="">All Status</option>
+              <option value="sale">For Sale</option>
+              <option value="lease">For Lease</option>
+              <option value="development">For Development</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <select id="locationFilter">
+              <option value="">All Locations</option>
+              <option value="masaka_town">Masaka Town</option>
+              <option value="nyendo">Nyendo</option>
+              <option value="kyabakuza">Kyabakuza</option>
+              <option value="kijjabwemi">Kijjabwemi</option>
+              <option value="kimaanya">Kimaanya</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search properties..."
+            />
+          </div>
+          <button class="btn btn-primary" id="viewAllBtn">
+            View All Properties
+          </button>
         </div>
+
+        <!-- Featured Properties -->
+        <h3 class="featured-title">Featured Land Listings</h3>
+        <div class="properties-grid" id="featuredProperties">
+          <!-- Featured properties will be loaded here -->
+        </div>
+
+        <!-- All Properties Modal -->
+        <div id="allPropertiesModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>All Available Land</h2>
+              <span class="close" id="closeModal">&times;</span>
+            </div>
+            <div class="modal-body">
+              <div class="properties-grid" id="allPropertiesGrid">
+                <!-- All properties will be loaded here -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property Detail Modal -->
+        <div id="propertyDetailModal" class="modal">
+          <div class="modal-content property-detail-content">
+            <div class="modal-header">
+              <h2 id="propertyDetailTitle">Property Details</h2>
+              <span class="close" id="closePropertyDetail">&times;</span>
+            </div>
+            <div class="modal-body">
+              <div class="property-detail-grid">
+                <div class="property-detail-left">
+                  <div class="property-detail-image">
+                    <img id="propertyDetailImg" src="" alt="" />
+                    <div
+                      class="property-detail-status"
+                      id="propertyDetailStatus"
+                    ></div>
+                  </div>
+                  <div class="property-gallery">
+                    <div class="gallery-images" id="propertyGallery">
+                      <!-- Additional images will be loaded here -->
+                    </div>
+                  </div>
+                </div>
+                <div class="property-detail-right">
+                  <div class="property-detail-info">
+                    <h3 id="propertyDetailName"></h3>
+                    <p
+                      class="property-detail-location"
+                      id="propertyDetailLocation"
+                    ></p>
+                    <p
+                      class="property-detail-price"
+                      id="propertyDetailPrice"
+                    ></p>
+                    <div
+                      class="property-detail-features"
+                      id="propertyDetailFeatures"
+                    ></div>
+                    <div
+                      class="property-detail-description"
+                      id="propertyDetailDescription"
+                    ></div>
+
+                    <div class="property-actions">
+                      <button class="btn btn-primary" id="buyPropertyBtn">
+                        <i class="fas fa-shopping-cart"></i> Buy Now
+                      </button>
+                      <button class="btn btn-secondary" id="contactPropertyBtn">
+                        <i class="fas fa-phone"></i> Contact Agent
+                      </button>
+                      <button class="btn btn-outline" id="scheduleViewingBtn">
+                        <i class="fas fa-calendar"></i> Schedule Viewing
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Property Map -->
+                  <div class="property-map-container">
+                    <h4>Location</h4>
+                    <div id="propertyMap" class="property-map"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Masaka Town, Masaka district, Uganda</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>+256 700 123 456</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>info@smartspace.ug</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>Working Hours</h3>
-                            <p>Mon - Fri: 8AM - 6PM<br>Sat: 9AM - 4PM</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Your Phone">
-                        </div>
-                        <div class="form-group">
-                            <select id="service" name="service" required>
-                                <option value="">Select Service</option>
-                                <option value="valuation">Property Valuation</option>
-                                <option value="survey">Land Survey</option>
-                                <option value="investment">Investment Analysis</option>
-                                <option value="legal">Legal Compliance</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Location</h3>
+                <p>Masaka Town, Masaka district, Uganda</p>
+              </div>
             </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Phone</h3>
+                <p>+256 700 123 456</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <p>info@smartspace.ug</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h3>Working Hours</h3>
+                <p>Mon - Fri: 8AM - 6PM<br />Sat: 9AM - 4PM</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Your Phone"
+                />
+              </div>
+              <div class="form-group">
+                <select id="service" name="service" required>
+                  <option value="">Select Service</option>
+                  <option value="valuation">Property Valuation</option>
+                  <option value="survey">Land Survey</option>
+                  <option value="investment">Investment Analysis</option>
+                  <option value="legal">Legal Compliance</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your Message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Smart Space</h3>
-                    <p>Professional land and property evaluation services in Masaka district.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#team">Team</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#properties">Properties</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#">Property Valuation</a></li>
-                        <li><a href="#">Land Survey</a></li>
-                        <li><a href="#">Investment Analysis</a></li>
-                        <li><a href="#">Legal Compliance</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Masaka Town, Masaka district</p>
-                    <p><i class="fas fa-phone"></i> +256 700 123 456</p>
-                    <p><i class="fas fa-envelope"></i> info@smartspace.ug</p>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Smart Space</h3>
+            <p>
+              Professional land and property evaluation services in Masaka
+              district.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Smart Space. All rights reserved.</p>
-            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#team">Team</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#properties">Properties</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Property Valuation</a></li>
+              <li><a href="#">Land Survey</a></li>
+              <li><a href="#">Investment Analysis</a></li>
+              <li><a href="#">Legal Compliance</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Masaka Town, Masaka district
+            </p>
+            <p><i class="fas fa-phone"></i> +256 700 123 456</p>
+            <p><i class="fas fa-envelope"></i> info@smartspace.ug</p>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Smart Space. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
