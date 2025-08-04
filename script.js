@@ -299,6 +299,12 @@ navLinks.forEach(link => {
 // Smooth scrolling for navigation links
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
+        // Check if it's an external link
+        if (link.classList.contains('external-link') || link.getAttribute('href').startsWith('http')) {
+            // Let external links work normally
+            return;
+        }
+        
         e.preventDefault();
         const targetId = link.getAttribute('href');
         const targetSection = document.querySelector(targetId);
